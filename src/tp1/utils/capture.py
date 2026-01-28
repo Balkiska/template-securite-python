@@ -14,15 +14,17 @@ class Capture:
         interface = self.interface
         logger.info(f"Capture traffic from interface {interface}")
 
-    def sort_network_protocols(self) -> None:
+    def sort_network_protocols(self) -> str:
         """
         Sort and return all captured network protocols
         """
+        return ""
 
-    def get_all_protocols(self) -> None:
+    def get_all_protocols(self) -> str:
         """
         Return all protocols captured with total packets number
         """
+        return ""
 
     def analyse(self, protocols: str) -> None:
         """
@@ -44,6 +46,10 @@ class Capture:
         self.summary = self.gen_summary()
 
     def get_summary(self) -> str:
+        """
+        Return summary
+        :return:
+        """
         return self.summary
 
     def gen_summary(self) -> str:

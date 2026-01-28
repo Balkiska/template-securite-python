@@ -1,5 +1,8 @@
+from tp1.utils.capture import Capture
+
+
 class Report:
-    def __init__(self, capture, filename, summary):
+    def __init__(self, capture: Capture, filename: str, summary: str):
         self.capture = capture
         self.filename = filename
         self.title = "TITRE DU RAPPORT"

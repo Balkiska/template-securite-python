@@ -1,46 +1,130 @@
-from tp1.utils.capture import Capture
+import os
+import tempfile
+import pygal
+from fpdf import FPDF
+from tp1.utils.config import logger
 
 
 class Report:
-    def __init__(self, capture: Capture, filename: str, summary: str):
+    def __init__(self, capture, filename: str, summary: str):
         self.capture = capture
         self.filename = filename
-        self.title = "TITRE DU RAPPORT"
+        self.title = "IDS/IPS - Rapport d'Analyse Reseau"
         self.summary = summary
-        self.array = ""
-        self.graph = ""
-
-    def concat_report(self) -> str:
-        """
-        Concat all data in report
-        """
-        content = ""
-        content += self.title
-        content += self.summary
-        content += self.array
-        content += self.graph
-
-        return content
-
-    def save(self, filename: str) -> None:
-        """
-        Save report in a file
-        :param filename:
-        :return:
-        """
-        final_content = self.concat_report()
-        with open(self.filename, "w") as report:
-            report.write(final_content)
+        self.array_data = []    # list of row tuples
+        self.graph_path = ""    # path to generated chart image
 
     def generate(self, param: str) -> None:
-        """
-        Generate graph and array
-        """
+        """Generate either a graph or an array from capture data."""
         if param == "graph":
-            # TODO: generate graph
-            graph = ""
-            self.graph = graph
+            self._generate_graph()
         elif param == "array":
-            # TODO: generate array
-            array = ""
-            self.array = array
+            self._generate_array()
+
+    def _generate_graph(self) -> None:
+        """Create a Pygal bar chart of protocol distribution and save as PNG."""
+        stats = self.capture.protocol_stats
+        if not stats:
+            logger.warning("No protocol stats to graph")
+            return
+
+        chart = pygal.Bar(
+            title="Protocoles Réseau Capturés",
+            x_title="Protocole",
+            y_title="Nombre de paquets",
+            style=pygal.style.CleanStyle,
+            print_values=True,
+        )
+        sorted_protos = sorted(stats.items(), key=lambda x: x[1], reverse=True)
+        chart.x_labels = [p for p, _ in sorted_protos]
+        chart.add("Paquets", [c for _, c in sorted_protos])
+
+        # save as PNG for PDF embedding
+        self.graph_path = os.path.join(tempfile.gettempdir(), "tp1_chart.png")
+        chart.render_to_png(self.graph_path)
+        logger.info(f"Graph saved to {self.graph_path}")
+
+    def _generate_array(self) -> None:
+        """Build table rows: protocol, count, legitimacy status."""
+        stats = self.capture.protocol_stats
+        alerts = self.capture.alerts
+        # build set of protocols involved in alerts
+        alert_protocols = {a["protocol"] for a in alerts}
+
+        sorted_protos = sorted(stats.items(), key=lambda x: x[1], reverse=True)
+        self.array_data = []
+        for proto, count in sorted_protos:
+            status = "Suspect" if proto in alert_protocols else "Légitime"
+            self.array_data.append((proto, str(count), status))
+        logger.info(f"Table built with {len(self.array_data)} rows")
+
+    # THE output
+
+    def save(self, filename: str) -> None:
+        """Generate and save the final PDF report."""
+        pdf = FPDF()
+        pdf.set_auto_page_break(auto=True, margin=15)
+        pdf.add_page()
+
+        # title
+        pdf.set_font("Helvetica", "B", 20)
+        pdf.cell(0, 15, self.title, new_x="LMARGIN", new_y="NEXT", align="C")
+        pdf.ln(5)
+
+        # summary
+        pdf.set_font("Helvetica", "", 11)
+        for line in self.summary.split("\n"):
+            pdf.cell(0, 6, line, new_x="LMARGIN", new_y="NEXT")
+        pdf.ln(5)
+
+        # graph
+        if self.graph_path and os.path.exists(self.graph_path):
+            pdf.set_font("Helvetica", "B", 14)
+            pdf.cell(0, 10, "Graphique des Protocoles", new_x="LMARGIN", new_y="NEXT")
+            pdf.image(self.graph_path, x=15, w=180)
+            pdf.ln(5)
+
+        # table
+        if self.array_data:
+            pdf.set_font("Helvetica", "B", 14)
+            pdf.cell(0, 10, "Tableau des Protocoles", new_x="LMARGIN", new_y="NEXT")
+
+            # table header
+            pdf.set_font("Helvetica", "B", 10)
+            col_widths = [70, 40, 70]
+            headers = ["Protocole", "Paquets", "Statut"]
+            for header, w in zip(headers, col_widths):
+                pdf.cell(w, 8, header, border=1, align="C")
+            pdf.ln()
+
+            # table rows
+            pdf.set_font("Helvetica", "", 10)
+            for proto, count, status in self.array_data:
+                pdf.cell(col_widths[0], 7, proto, border=1)
+                pdf.cell(col_widths[1], 7, count, border=1, align="C")
+                pdf.cell(col_widths[2], 7, status, border=1, align="C")
+                pdf.ln()
+            pdf.ln(5)
+
+        # alerts section
+        alerts = self.capture.alerts
+        if alerts:
+            pdf.set_font("Helvetica", "B", 14)
+            pdf.cell(0, 10, "Alertes de Securite", new_x="LMARGIN", new_y="NEXT")
+            pdf.set_font("Helvetica", "", 10)
+            for alert in alerts:
+                pdf.set_text_color(200, 0, 0)
+                pdf.cell(0, 6, f"[{alert['type']}] {alert['detail']}", new_x="LMARGIN", new_y="NEXT")
+                if alert["attacker_ip"]:
+                    pdf.cell(0, 6, f"  IP: {alert['attacker_ip']}", new_x="LMARGIN", new_y="NEXT")
+                if alert["attacker_mac"]:
+                    pdf.cell(0, 6, f"  MAC: {alert['attacker_mac']}", new_x="LMARGIN", new_y="NEXT")
+            pdf.set_text_color(0, 0, 0)
+        else:
+            pdf.set_font("Helvetica", "B", 12)
+            pdf.set_text_color(0, 128, 0)
+            pdf.cell(0, 10, "Aucune menace detectee. Tout va bien.", new_x="LMARGIN", new_y="NEXT", align="C")
+            pdf.set_text_color(0, 0, 0)
+
+        pdf.output(filename)
+        logger.info(f"Report saved to {filename}")

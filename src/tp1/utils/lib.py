@@ -1,3 +1,6 @@
+from scapy.all import get_if_list
+
+
 def hello_world() -> str:
     """
     Hello world function
@@ -9,9 +12,24 @@ def hello_world() -> str:
 
 def choose_interface() -> str:
     """
-    Return network interface and input user choice
+    List available network interfaces and let the user pick one.
 
-    :return: network interface
+    :return: selected network interface name
     """
-    interface = ""
-    return interface
+    interfaces = get_if_list()
+    if not interfaces:
+        return ""
+
+    print("\nAvailable Network Interfaces")
+    for i, iface in enumerate(interfaces):
+        print(f"  [{i}] {iface}")
+    print()
+
+    while True:
+        try:
+            choice = int(input("Select interface number: "))
+            if 0 <= choice < len(interfaces):
+                return interfaces[choice]
+            print(f"Please enter a number between 0 and {len(interfaces) - 1}")
+        except (ValueError, EOFError):
+            return interfaces[0]

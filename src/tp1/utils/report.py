@@ -9,7 +9,7 @@ class Report:
     def __init__(self, capture, filename: str, summary: str):
         self.capture = capture
         self.filename = filename
-        self.title = "IDS/IPS - Rapport d'Analyse Reseau"
+        self.title = "IDS/IPS - Network Analysis Report"
         self.summary = summary
         self.array_data = []    # list of row tuples
         self.graph_path = ""    # path to generated chart image
@@ -28,16 +28,17 @@ class Report:
             logger.warning("No protocol stats to graph")
             return
 
+        pink_style = pygal.style.Style(colors=["#FFB6C1"])
         chart = pygal.Bar(
-            title="Protocoles Réseau Capturés",
-            x_title="Protocole",
-            y_title="Nombre de paquets",
-            style=pygal.style.CleanStyle,
+            title="Captured Network Protocols",
+            x_title="Protocol",
+            y_title="Packet Count",
+            style=pink_style,
             print_values=True,
         )
         sorted_protos = sorted(stats.items(), key=lambda x: x[1], reverse=True)
         chart.x_labels = [p for p, _ in sorted_protos]
-        chart.add("Paquets", [c for _, c in sorted_protos])
+        chart.add("Packets", [c for _, c in sorted_protos])
 
         # save as PNG for PDF embedding
         self.graph_path = os.path.join(tempfile.gettempdir(), "tp1_chart.png")
@@ -54,7 +55,7 @@ class Report:
         sorted_protos = sorted(stats.items(), key=lambda x: x[1], reverse=True)
         self.array_data = []
         for proto, count in sorted_protos:
-            status = "Suspect" if proto in alert_protocols else "Légitime"
+            status = "Suspicious" if proto in alert_protocols else "Legitimate"
             self.array_data.append((proto, str(count), status))
         logger.info(f"Table built with {len(self.array_data)} rows")
 
@@ -68,31 +69,32 @@ class Report:
 
         # title
         pdf.set_font("Helvetica", "B", 20)
+        pdf.set_text_color(255, 182, 193)
         pdf.cell(0, 15, self.title, new_x="LMARGIN", new_y="NEXT", align="C")
+        pdf.set_text_color(0, 0, 0)
         pdf.ln(5)
 
         # summary
         pdf.set_font("Helvetica", "", 11)
-        for line in self.summary.split("\n"):
-            pdf.cell(0, 6, line, new_x="LMARGIN", new_y="NEXT")
+        pdf.cell(0, 6, f"Packets captured: {len(self.capture.packets)}", new_x="LMARGIN", new_y="NEXT")
         pdf.ln(5)
 
         # graph
         if self.graph_path and os.path.exists(self.graph_path):
             pdf.set_font("Helvetica", "B", 14)
-            pdf.cell(0, 10, "Graphique des Protocoles", new_x="LMARGIN", new_y="NEXT")
+            pdf.cell(0, 10, "Protocol Chart", new_x="LMARGIN", new_y="NEXT")
             pdf.image(self.graph_path, x=15, w=180)
             pdf.ln(5)
 
         # table
         if self.array_data:
             pdf.set_font("Helvetica", "B", 14)
-            pdf.cell(0, 10, "Tableau des Protocoles", new_x="LMARGIN", new_y="NEXT")
+            pdf.cell(0, 10, "Protocol Table", new_x="LMARGIN", new_y="NEXT")
 
             # table header
             pdf.set_font("Helvetica", "B", 10)
             col_widths = [70, 40, 70]
-            headers = ["Protocole", "Paquets", "Statut"]
+            headers = ["Protocol", "Packets", "Status"]
             for header, w in zip(headers, col_widths):
                 pdf.cell(w, 8, header, border=1, align="C")
             pdf.ln()
@@ -110,7 +112,7 @@ class Report:
         alerts = self.capture.alerts
         if alerts:
             pdf.set_font("Helvetica", "B", 14)
-            pdf.cell(0, 10, "Alertes de Securite", new_x="LMARGIN", new_y="NEXT")
+            pdf.cell(0, 10, "Security Alerts", new_x="LMARGIN", new_y="NEXT")
             pdf.set_font("Helvetica", "", 10)
             for alert in alerts:
                 pdf.set_text_color(200, 0, 0)
@@ -122,8 +124,8 @@ class Report:
             pdf.set_text_color(0, 0, 0)
         else:
             pdf.set_font("Helvetica", "B", 12)
-            pdf.set_text_color(0, 128, 0)
-            pdf.cell(0, 10, "Aucune menace detectee. Tout va bien.", new_x="LMARGIN", new_y="NEXT", align="C")
+            pdf.set_text_color(255, 182, 193)
+            pdf.cell(0, 10, "No detected threats.", new_x="LMARGIN", new_y="NEXT", align="C")
             pdf.set_text_color(0, 0, 0)
 
         pdf.output(filename)

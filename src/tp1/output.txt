@@ -1,0 +1,37 @@
+➜  template-securite-python git:(main) ✗ sudo -E poetry run tp1
+
+2026-03-15 15:30:08,214 - TP1 - INFO - Starting TP1 — IDS/IPS Maison
+
+Available Network Interfaces
+  [0] lo
+  [1] tailscale0
+  [2] wlan0
+  [3] br-0aef39f8c727
+  [4] docker0
+  [5] veth90cae1e
+  [6] vethafb3ac0
+  [7] veth5f244a7
+
+Select interface number: 2
+2026-03-15 15:30:10,599 - TP1 - INFO - Capturing on 'wlan0' (max 50 pkts, 30s timeout)
+2026-03-15 15:30:18,497 - TP1 - INFO - Captured 50 packets
+2026-03-15 15:30:18,499 - TP1 - INFO - No threats detected — all traffic looks legitimate.
+2026-03-15 15:30:18,499 - TP1 - INFO -
+Capture Summary: 50 packets captured
+Protocols detected: 9
+
+  Ether: 50 packets
+  TCP: 36 packets
+  Raw: 31 packets
+  IPv6: 28 packets
+  IP: 22 packets
+  UDP: 10 packets
+  ICMPv6ND_NS: 2 packets
+  ICMPv6NDOptSrcLLAddr: 2 packets
+  ICMPv6ND_NA: 2 packets
+
+STATUS: All traffic appears legitimate.
+2026-03-15 15:30:18,678 - TP1 - INFO - Graph saved to /tmp/tp1_chart.png
+2026-03-15 15:30:18,678 - TP1 - INFO - Table built with 9 rows
+2026-03-15 15:30:18,697 - TP1 - INFO - Report saved to report.pdf
+2026-03-15 15:30:18,697 - TP1 - INFO - Done! Report saved to report.pdf

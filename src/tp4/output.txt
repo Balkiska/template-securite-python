@@ -1,0 +1,210 @@
+➜  template-securite-python git:(main) ✗ sudo -E poetry run tp4
+
+2026-03-16 21:34:04,194 - TP4 - INFO - Starting TP4
+[+] Opening connection to 31.220.95.27 on port 13337: Done
+2026-03-16 21:34:04,194 - pwnlib.tubes.remote.remote.128839960740256 - INFO - Opening connection to 31.220.95.27 on port 13337
+2026-03-16 21:34:04,196 - pwnlib.tubes.remote.remote.128839960740256 - INFO - Opening connection to 31.220.95.27 on port 13337: Trying 31.220.95.27
+2026-03-16 21:34:04,222 - pwnlib.tubes.remote.remote.128839960740256 - INFO - Opening connection to 31.220.95.27 on port 13337: Done
+2026-03-16 21:34:04,237 - TP4 - INFO - Challenge: 7766356d73326431367235377430736b7335313867347964663966703962726d
+2026-03-16 21:34:04,237 - TP4 - INFO - Decoded: wf5ms2d16r57t0sks518g4ydf9fp9brm
+2026-03-16 21:34:04,306 - TP4 - INFO - Challenge: 6c686d6d3462706b697a396671647462313974386776323233737134386f7864
+2026-03-16 21:34:04,306 - TP4 - INFO - Decoded: lhmm4bpkiz9fqdtb19t8gv223sq48oxd
+2026-03-16 21:34:04,373 - TP4 - INFO - Challenge: 69693333657830306b6a36346373363075646d73786574693138386138656d73
+2026-03-16 21:34:04,374 - TP4 - INFO - Decoded: ii33ex00kj64cs60udmsxeti188a8ems
+2026-03-16 21:34:04,443 - TP4 - INFO - Challenge: -.-- .-- -.. .- ..- ...-- .- -... ----. --.. --.. -..- --- .-.. .--- -.-. .... .-. -..- ....- --.- -..- ..-. -.. .-. -.... ...- .--- .-.. ----- .... -...
+2026-03-16 21:34:04,443 - TP4 - INFO - Decoded: YWDAU3AB9ZZXOLJCHRX4QXFDR6VJL0HB
+2026-03-16 21:34:04,513 - TP4 - INFO - Challenge: 666f707a6f6e70323276306c763234683739646765336278666b756d6e663330
+2026-03-16 21:34:04,514 - TP4 - INFO - Decoded: fopzonp22v0lv24h79dge3bxfkumnf30
+2026-03-16 21:34:04,584 - TP4 - INFO - Challenge: 377863397661317437337879326f73336a75326832763267626973767378706f
+2026-03-16 21:34:04,585 - TP4 - INFO - Decoded: 7xc9va1t73xy2os3ju2h2v2gbisvsxpo
+2026-03-16 21:34:04,660 - TP4 - INFO - Challenge: ..--- .. -. ..--- .-. ... ...-- . -... ... -- .-. -. - ----- ----. ..--- ... -... .--. --... --- --- ..-. -.... -.-. ----- .-- ....- -.... --... .---
+2026-03-16 21:34:04,661 - TP4 - INFO - Decoded: 2IN2RS3EBSMRNT092SBP7OOF6C0W467J
+2026-03-16 21:34:04,729 - TP4 - INFO - Challenge: aDBxN3ZtMzFuajJvYTg1NzV3ejJia3lyN2tsMWxhdGI=
+2026-03-16 21:34:04,729 - TP4 - INFO - Decoded: h0q7vm31nj2oa8575wz2bkyr7kl1latb
+2026-03-16 21:34:04,796 - TP4 - INFO - Challenge: 7937356c756d3272656167686a6a6f6b77366172666c6234357965616c387537
+2026-03-16 21:34:04,796 - TP4 - INFO - Decoded: y75lum2reaghjjokw6arflb45yeal8u7
+2026-03-16 21:34:04,864 - TP4 - INFO - Challenge: ZG9sMHU0enNnNmY2cmlmem94dTN1ODBmMWduYTV1eWk=
+2026-03-16 21:34:04,865 - TP4 - INFO - Decoded: dol0u4zsg6f6rifzoxu3u80f1gna5uyi
+2026-03-16 21:34:04,933 - TP4 - INFO - Challenge: --... ..--- -.-. ----. ---.. --... .... .--. -.- .-- -... --.- .-- .---- .--. -.. --. .- . -.. -.-. ..--- -... .... ..-. ..-. .-.. -.- --. --.- ----. .
+2026-03-16 21:34:04,934 - TP4 - INFO - Decoded: 72C987HPKWBQW1PDGAEDC2BHFFLKGQ9E
+2026-03-16 21:34:05,004 - TP4 - INFO - Challenge: M3JtZDRtbTkyNGp6M3IyOTIyam1majg5anRzeHR2ZXE=
+2026-03-16 21:34:05,004 - TP4 - INFO - Decoded: 3rmd4mm924jz3r2922jmfj89jtsxtveq
+2026-03-16 21:34:05,073 - TP4 - INFO - Challenge: eWVjZmRheGc1dnNycDFxcG85dXNtaTM5OTJjOHd3Mjk=
+2026-03-16 21:34:05,074 - TP4 - INFO - Decoded: yecfdaxg5vsrp1qpo9usmi3992c8ww29
+2026-03-16 21:34:05,144 - TP4 - INFO - Challenge: - .- --.- .--. -. --... ...- .. ....- --.- .- -- .-- ..... .- ..--- -.- ...-- .. ....- ...- -- .--- -.-. -. .-.. -.-. ...- ..--- ..... --... ..---
+2026-03-16 21:34:05,144 - TP4 - INFO - Decoded: TAQPN7VI4QAMW5A2K3I4VMJCNLCV2572
+2026-03-16 21:34:05,210 - TP4 - INFO - Challenge: -.-. .-. --. ----- ----- .... ---.. -... .... .--- .. .---- .-.. --.. ----. -... .-- .. -... -.- --. -.- .-- -.. -- ... --. .- -- -- .-. ..
+2026-03-16 21:34:05,211 - TP4 - INFO - Decoded: CRG00H8BHJI1LZ9BWIBKGKWDMSGAMMRI
+2026-03-16 21:34:05,280 - TP4 - INFO - Challenge: 707779336a646733666a7731656f3477753170373576686f36696d6735646e76
+2026-03-16 21:34:05,280 - TP4 - INFO - Decoded: pwy3jdg3fjw1eo4wu1p75vho6img5dnv
+2026-03-16 21:34:05,346 - TP4 - INFO - Challenge: ..-. --.. ...- .--- ... ....- ----. .---- ----- .... -.-- --.- .--. .-.. -.... ...- ----. --.. .--. --... .... .... ..--- -.. .- -. -.- .---- --.. ...- - ..-
+2026-03-16 21:34:05,347 - TP4 - INFO - Decoded: FZVJS4910HYQPL6V9ZP7HH2DANK1ZVTU
+2026-03-16 21:34:05,414 - TP4 - INFO - Challenge: .... . ...- -... .- -... ...-- .--- ..- .-. --.- . .... .-.. -- -- -.-- ... ...-- --- -.-- -.- .-.. --.. .--. ..--- ---.. --. --... ..-. -- --
+2026-03-16 21:34:05,414 - TP4 - INFO - Decoded: HEVBAB3JURQEHLMMYS3OYKLZP28G7FMM
+2026-03-16 21:34:05,479 - TP4 - INFO - Challenge: 36657533346333786e7735397463367079626839776d366a316b6b736d326230
+2026-03-16 21:34:05,480 - TP4 - INFO - Decoded: 6eu34c3xnw59tc6pybh9wm6j1kksm2b0
+2026-03-16 21:34:05,548 - TP4 - INFO - Challenge: OWNsdHJkdTMxN2tpZDdvcXBwOTgxcHR0NHlkdTYxc2U=
+2026-03-16 21:34:05,548 - TP4 - INFO - Decoded: 9cltrdu317kid7oqpp981ptt4ydu61se
+2026-03-16 21:34:05,622 - TP4 - INFO - Challenge: 7531666b6435687136736730767279616a6a766d63626e69626f743068766131
+2026-03-16 21:34:05,622 - TP4 - INFO - Decoded: u1fkd5hq6sg0vryajjvmcbnibot0hva1
+2026-03-16 21:34:05,694 - TP4 - INFO - Challenge: MDNkbThmaWV6eWpvcHNybGFsY3BqYjcwOXJiaWEyYmE=
+2026-03-16 21:34:05,694 - TP4 - INFO - Decoded: 03dm8fiezyjopsrlalcpjb709rbia2ba
+2026-03-16 21:34:05,759 - TP4 - INFO - Challenge: 3971303365376a353068763363746c7072346f737174383579726a673870306d
+2026-03-16 21:34:05,759 - TP4 - INFO - Decoded: 9q03e7j50hv3ctlpr4osqt85yrjg8p0m
+2026-03-16 21:34:05,826 - TP4 - INFO - Challenge: 73687236657667717a3975327363646d3436347a756c677739397231306d7934
+2026-03-16 21:34:05,826 - TP4 - INFO - Decoded: shr6evgqz9u2scdm464zulgw99r10my4
+2026-03-16 21:34:05,893 - TP4 - INFO - Challenge: .... --- ----. .--. --.- . ....- -.. ..- ... -... -.-- --- .- .-- ..- .-- -. .. --. -... .--. ----. . ...- .--. .-. --- ...- .-. -. ...--
+2026-03-16 21:34:05,893 - TP4 - INFO - Decoded: HO9PQE4DUSBYOAWUWNIGBP9EVPROVRN3
+2026-03-16 21:34:05,961 - TP4 - INFO - Challenge: MmFrcTNjd2VrdjF4ZDF3cmxpcmxoYzFiczYwNjQ2cG0=
+2026-03-16 21:34:05,961 - TP4 - INFO - Decoded: 2akq3cwekv1xd1wrlirlhc1bs60646pm
+2026-03-16 21:34:06,031 - TP4 - INFO - Challenge: 7270683730356d38706a316a3373376f716e616e61646b397a3574656b647667
+2026-03-16 21:34:06,032 - TP4 - INFO - Decoded: rph705m8pj1j3s7oqnanadk9z5tekdvg
+2026-03-16 21:34:06,100 - TP4 - INFO - Challenge: OGd2ZWFjczFwYmhzeHQ5cWY1M3h1dm44dGxidWhtcno=
+2026-03-16 21:34:06,101 - TP4 - INFO - Decoded: 8gveacs1pbhsxt9qf53xuvn8tlbuhmrz
+2026-03-16 21:34:06,170 - TP4 - INFO - Challenge: 6e38766a6c6d743336683232747662616232376f697a6d70636e686173363263
+2026-03-16 21:34:06,170 - TP4 - INFO - Decoded: n8vjlmt36h22tvbab27oizmpcnhas62c
+2026-03-16 21:34:06,237 - TP4 - INFO - Challenge: .---- .---- ..... ----. ---.. -.. .--. .---- ..--- --.. .-. ----. --. ----- - ----. ... ....- .---- .--- -... -.. ....- ... -. ..... ... -.- -. ..- --.. .--
+2026-03-16 21:34:06,237 - TP4 - INFO - Decoded: 11598DP12ZR9G0T9S41JBD4SN5SKNUZW
+2026-03-16 21:34:06,310 - TP4 - INFO - Challenge: 7969323736786b71743535316166637a32726976757677696e65657175356235
+2026-03-16 21:34:06,311 - TP4 - INFO - Decoded: yi276xkqt551afcz2rivuvwineequ5b5
+2026-03-16 21:34:06,381 - TP4 - INFO - Challenge: 7a697671306a746765303430357979707736307a746a303371326b67716a7561
+2026-03-16 21:34:06,381 - TP4 - INFO - Decoded: zivq0jtge0405yypw60ztj03q2kgqjua
+2026-03-16 21:34:06,452 - TP4 - INFO - Challenge: MmRlbjc0M2dtbDJ3cXVlaXBuYWlxcWtqZ2U4ejJmc2I=
+2026-03-16 21:34:06,453 - TP4 - INFO - Decoded: 2den743gml2wqueipnaiqqkjge8z2fsb
+2026-03-16 21:34:06,520 - TP4 - INFO - Challenge: ZGx2eWZnMm52em53cW53Ymd2cm9lYXFxbncxZTRsbjI=
+2026-03-16 21:34:06,521 - TP4 - INFO - Decoded: dlvyfg2nvznwqnwbgvroeaqqnw1e4ln2
+2026-03-16 21:34:06,585 - TP4 - INFO - Challenge: 746168317661766b32326b6c7267346564643332636676616471363332686b70
+2026-03-16 21:34:06,585 - TP4 - INFO - Decoded: tah1vavk22klrg4edd32cfvadq632hkp
+2026-03-16 21:34:06,653 - TP4 - INFO - Challenge: bzl0NmY0ZGNkN2YxZXl5bzNhbW54NG5kdmc1d3BhZ3U=
+2026-03-16 21:34:06,654 - TP4 - INFO - Decoded: o9t6f4dcd7f1eyyo3amnx4ndvg5wpagu
+2026-03-16 21:34:06,724 - TP4 - INFO - Challenge: -... --- .... .---- --... -.-- .-. ...- --- ...-- ..-. ----. ..... ---.. .-. .-- ----- .--. --. ...-- .. --- ... ---.. .--- -- - -..- .--- --... ..-. --
+2026-03-16 21:34:06,724 - TP4 - INFO - Decoded: BOH17YRVO3F958RW0PG3IOS8JMTXJ7FM
+2026-03-16 21:34:06,790 - TP4 - INFO - Challenge: 6f736b37326571767638717a31716b71307075686b71793634646138656b6362
+2026-03-16 21:34:06,790 - TP4 - INFO - Decoded: osk72eqvv8qz1qkq0puhkqy64da8ekcb
+2026-03-16 21:34:06,859 - TP4 - INFO - Challenge: 6a706d31347764626f6666626871316263317267693275736739687832697566
+2026-03-16 21:34:06,859 - TP4 - INFO - Decoded: jpm14wdboffbhq1bc1rgi2usg9hx2iuf
+2026-03-16 21:34:06,927 - TP4 - INFO - Challenge: 716b777277676c3677756468766163317a377770783468703965657574626239
+2026-03-16 21:34:06,928 - TP4 - INFO - Decoded: qkwrwgl6wudhvac1z7wpx4hp9eeutbb9
+2026-03-16 21:34:06,996 - TP4 - INFO - Challenge: MTBtaHl0OGFlN3FpZ2NmbXEzYXpqOHB5bmRlamtwN3c=
+2026-03-16 21:34:06,996 - TP4 - INFO - Decoded: 10mhyt8ae7qigcfmq3azj8pyndejkp7w
+2026-03-16 21:34:07,066 - TP4 - INFO - Challenge: MWFzNGUxdGRodndhdWl3c3hzMXVpdHNrY2QxeTR0Z2U=
+2026-03-16 21:34:07,066 - TP4 - INFO - Decoded: 1as4e1tdhvwauiwsxs1uitskcd1y4tge
+2026-03-16 21:34:07,134 - TP4 - INFO - Challenge: dnN1ODk2bWkydjZqdGRpcDFxbmI5NTN0MGowdGV1MXQ=
+2026-03-16 21:34:07,134 - TP4 - INFO - Decoded: vsu896mi2v6jtdip1qnb953t0j0teu1t
+2026-03-16 21:34:07,201 - TP4 - INFO - Challenge: -. -.-. --- -- ----. -... ---.. -..- ..--- . .... .... . ..... ... --- .. -... .. ...- ...- ..- ..--- .-. ..- --- -.-- .- .- . .-. -...
+2026-03-16 21:34:07,201 - TP4 - INFO - Decoded: NCOM9B8X2EHHE5SOIBIVVU2RUOYAAERB
+2026-03-16 21:34:07,269 - TP4 - INFO - Challenge: 67637679753876686764636565713671306464736f6461626967347738776133
+2026-03-16 21:34:07,269 - TP4 - INFO - Decoded: gcvyu8vhgdceeq6q0ddsodabig4w8wa3
+2026-03-16 21:34:07,341 - TP4 - INFO - Challenge: .-.. .---- -... .--. --.- -... .---- ----. ----- --. -... .-- ...-- ..... -.- -. -.-- .... ...-- ...- .-- -... -.-- .---- .. --. ..- -.. ..-. ..... ..--- --.
+2026-03-16 21:34:07,342 - TP4 - INFO - Decoded: L1BPQB190GBW35KNYH3VWBY1IGUDF52G
+2026-03-16 21:34:07,409 - TP4 - INFO - Challenge: 62747374336d7a3968646969793936323232703464353877746972716d366362
+2026-03-16 21:34:07,409 - TP4 - INFO - Decoded: btst3mz9hdiiy96222p4d58wtirqm6cb
+2026-03-16 21:34:07,477 - TP4 - INFO - Challenge: 3364336c39747075777a306d6170356565687239636865793532687830353873
+2026-03-16 21:34:07,477 - TP4 - INFO - Decoded: 3d3l9tpuwz0map5eehr9chey52hx058s
+2026-03-16 21:34:07,543 - TP4 - INFO - Challenge: 73756b623835656b3765356931316c6632686a6e776c773330653671396f716c
+2026-03-16 21:34:07,543 - TP4 - INFO - Decoded: sukb85ek7e5i11lf2hjnwlw30e6q9oql
+2026-03-16 21:34:07,611 - TP4 - INFO - Challenge: -..- ... .-- -..- . ..--- .-.. -. .... --. .. ... -... .---- --- ..-. ...- ....- .. .--. ....- ----. -.- .... -.. -.-. ----. .-.. -.. ----. --.. .--
+2026-03-16 21:34:07,612 - TP4 - INFO - Decoded: XSWXE2LNHGISB1OFV4IP49KHDC9LD9ZW
+2026-03-16 21:34:07,682 - TP4 - INFO - Challenge: ZXZtbXBkcXJjanM1dWR1YWwxN24wY2VuZXdrNnhjZWc=
+2026-03-16 21:34:07,683 - TP4 - INFO - Decoded: evmmpdqrcjs5udual17n0cenewk6xceg
+2026-03-16 21:34:07,749 - TP4 - INFO - Challenge: -... -.-. ----. -. ----. .--- ..-. --. ....- --.. .--. -.... --.. ---.. -.- .... ...- --... ---.. -.... .--- --.- .--. .. ---.. -.. .-. ... ...- ----. --- -
+2026-03-16 21:34:07,750 - TP4 - INFO - Decoded: BC9N9JFG4ZP6Z8KHV786JQPI8DRSV9OT
+2026-03-16 21:34:07,816 - TP4 - INFO - Challenge: .--. -.. .-. .-- .-. -. - -..- --.- -.... -.-- ... --.. ....- --... ..--- .--- .... -.-- .. -.-. . ----. -.-. .--- -... .--- -.. ..--- .-- -.-. ..
+2026-03-16 21:34:07,816 - TP4 - INFO - Decoded: PDRWRNTXQ6YSZ472JHYICE9CJBJD2WCI
+2026-03-16 21:34:07,883 - TP4 - INFO - Challenge: Y3ZvajRiejdueHJoM3VmZjRhczJubTVqZDN1a2pyY3o=
+2026-03-16 21:34:07,884 - TP4 - INFO - Decoded: cvoj4bz7nxrh3uff4as2nm5jd3ukjrcz
+2026-03-16 21:34:07,950 - TP4 - INFO - Challenge: .... ----- -... -... ...-- ...- --- .--- .-- -- ..- - -- -.... .--. ..- -.-. -.. ...-- -. --.. .---- ---.. .-.. ....- ..--- -.-. -.- ---.. -.-. --.. .
+2026-03-16 21:34:07,950 - TP4 - INFO - Decoded: H0BB3VOJWMUTM6PUCD3NZ18L42CK8CZE
+2026-03-16 21:34:08,020 - TP4 - INFO - Challenge: YjA2MHNsdXowMjhndWN2NXptcDhnNHR4N24ycTZocmQ=
+2026-03-16 21:34:08,020 - TP4 - INFO - Decoded: b060sluz028gucv5zmp8g4tx7n2q6hrd
+2026-03-16 21:34:08,087 - TP4 - INFO - Challenge: ----- --. --.. ... -- --. ..... ..... ---.. ----- ----- ...-- --... ---.. ...-- .-. -.... ..-. -.... --... .--- --- ..- -.-. .... ..- ... -.-. ..... --.- -... ----.
+2026-03-16 21:34:08,087 - TP4 - INFO - Decoded: 0GZSMG558003783R6F67JOUCHUSC5QB9
+2026-03-16 21:34:08,153 - TP4 - INFO - Challenge: 74686363396e76316f6b346e713173636b38696c6b643162337468613934786b
+2026-03-16 21:34:08,153 - TP4 - INFO - Decoded: thcc9nv1ok4nq1sck8ilkd1b3tha94xk
+2026-03-16 21:34:08,221 - TP4 - INFO - Challenge: -- -.-- -... -..- . .... -.... ----. ..... ..-. ..... ----. --.. -.-. --.- -... -.... . --... ...-- -.... . .. .-.. .. .---- .-. .--. -. --.. . --..
+2026-03-16 21:34:08,221 - TP4 - INFO - Decoded: MYBXEH695F59ZCQB6E736EILI1RPNZEZ
+2026-03-16 21:34:08,296 - TP4 - INFO - Challenge: .... -. ... . . -.. .- -.-- ..- ..-. ----- -.... ...-- .. ... -.. .-. -.-- - .-. ..-. .-.. ...-- .... - .---- ...- ... ---.. ..- --... .--
+2026-03-16 21:34:08,296 - TP4 - INFO - Decoded: HNSEEDAYUF063ISDRYTRFL3HT1VS8U7W
+2026-03-16 21:34:08,367 - TP4 - INFO - Challenge: -. ...-- .--- .... .--- . ..-. ----. . -..- --.. .--. .-- .-- .- --- .- .-- --.- .-- -. ....- ...-- -- ...-- -. .-.. -. -- .--- ...- ----.
+2026-03-16 21:34:08,367 - TP4 - INFO - Decoded: N3JHJEF9EXZPWWAOAWQWN43M3NLNMJV9
+2026-03-16 21:34:08,626 - TP4 - INFO - Challenge: 33387077617a6b32716f73717a666a6d6e706937697838397372386b79623667
+2026-03-16 21:34:08,626 - TP4 - INFO - Decoded: 38pwazk2qosqzfjmnpi7ix89sr8kyb6g
+2026-03-16 21:34:08,700 - TP4 - INFO - Challenge: ODdwOG5zazdkamp4ZTRscnFkemRmd3NoZ3Mwa2FncnY=
+2026-03-16 21:34:08,701 - TP4 - INFO - Decoded: 87p8nsk7djjxe4lrqdzdfwshgs0kagrv
+2026-03-16 21:34:08,770 - TP4 - INFO - Challenge: Y2U0MWIzOGlzN2JoZWR4YmNkYm9saWYzdXkycWZhY2E=
+2026-03-16 21:34:08,771 - TP4 - INFO - Decoded: ce41b38is7bhedxbcdbolif3uy2qfaca
+2026-03-16 21:34:08,858 - TP4 - INFO - Challenge: djQ3NzZuMXYwaHdoa2NreW1pY2w4aGYxOGZ4MHNjd2U=
+2026-03-16 21:34:08,859 - TP4 - INFO - Decoded: v4776n1v0hwhkckymicl8hf18fx0scwe
+2026-03-16 21:34:08,930 - TP4 - INFO - Challenge: NXlyN2d1OGI1b3N6ZHc3M3R3OXc2N3JranpjMDg1bGU=
+2026-03-16 21:34:08,930 - TP4 - INFO - Decoded: 5yr7gu8b5oszdw73tw9w67rkjzc085le
+2026-03-16 21:34:09,001 - TP4 - INFO - Challenge: 33706a6c6f636365646a6967746133786c6f7978696f796c6f39796e70386e35
+2026-03-16 21:34:09,002 - TP4 - INFO - Decoded: 3pjloccedjigta3xloyxioylo9ynp8n5
+2026-03-16 21:34:09,070 - TP4 - INFO - Challenge: bm1tZGQ1dTlvcDd1N2cyMWZoa2FtdjF4d2xoamE3dDI=
+2026-03-16 21:34:09,070 - TP4 - INFO - Decoded: nmmdd5u9op7u7g21fhkamv1xwlhja7t2
+2026-03-16 21:34:09,140 - TP4 - INFO - Challenge: --- .--- -. --- -.-. .-.. .--- -- ---.. -.-- -.. ...-- -..- .-- -.... -... .---- -.. . ... --... ... .---- .- --... . ---.. . --.- . ---.. --...
+2026-03-16 21:34:09,140 - TP4 - INFO - Decoded: OJNOCLJM8YD3XW6B1DES7S1A7E8EQE87
+2026-03-16 21:34:09,206 - TP4 - INFO - Challenge: .--. -... ..... .--- . ..- -.. -. --. - --... ..- -... ... --... ... .- ---.. . - - .--. - -.... .-- - .--- --- ...-- ... .---- .-
+2026-03-16 21:34:09,206 - TP4 - INFO - Decoded: PB5JEUDNGT7UBS7SA8ETTPT6WTJO3S1A
+2026-03-16 21:34:09,279 - TP4 - INFO - Challenge: d2JjcDVvbWxuMGpnaHo0c3pyeHJsZHAwYjl2a3piOWY=
+2026-03-16 21:34:09,279 - TP4 - INFO - Decoded: wbcp5omln0jghz4szrxrldp0b9vkzb9f
+2026-03-16 21:34:09,346 - TP4 - INFO - Challenge: .-.. ----- ...-- - --.- --- ..... ..- ..... ....- -- --.- .-- -.-- -.-- . .-. -.... .. .-- .-.. ..- ...-- -.... -.. -.- .. .-- .... -. ....- .
+2026-03-16 21:34:09,346 - TP4 - INFO - Decoded: L03TQO5U54MQWYYER6IWLU36DKIWHN4E
+2026-03-16 21:34:09,417 - TP4 - INFO - Challenge: NjVzOG1xbGw0OXI3OWxheWFjcDF0dzdnc2NubXB3aGk=
+2026-03-16 21:34:09,417 - TP4 - INFO - Decoded: 65s8mqll49r79layacp1tw7gscnmpwhi
+2026-03-16 21:34:09,482 - TP4 - INFO - Challenge: MzdtYzkxMmxsZjByd3hxMGk5MGlkNTVzMnR3ZXBtbGM=
+2026-03-16 21:34:09,483 - TP4 - INFO - Decoded: 37mc912llf0rwxq0i90id55s2twepmlc
+2026-03-16 21:34:09,552 - TP4 - INFO - Challenge: M2s4YXBwOXFlaW9jbXJuc2l4ejNzMXN5YnFka252NzM=
+2026-03-16 21:34:09,553 - TP4 - INFO - Decoded: 3k8app9qeiocmrnsixz3s1sybqdknv73
+2026-03-16 21:34:09,621 - TP4 - INFO - Challenge: c3o3dzBnMGhuYjVtNnEzY2xzdnBhZzZlYWtveGJ0amU=
+2026-03-16 21:34:09,621 - TP4 - INFO - Decoded: sz7w0g0hnb5m6q3clsvpag6eakoxbtje
+2026-03-16 21:34:09,695 - TP4 - INFO - Challenge: 737173627569313862627933616471706661757233366976646a6d3562327769
+2026-03-16 21:34:09,695 - TP4 - INFO - Decoded: sqsbui18bby3adqpfaur36ivdjm5b2wi
+2026-03-16 21:34:09,767 - TP4 - INFO - Challenge: ---.. -. -.-- -.-- -.-. ....- ..- --. ....- . ...- -.... -- ----- -.... --. --. -... --... -.. .---- --- -..- --.. -.- ... ...- -. -... . ...-- ----.
+2026-03-16 21:34:09,767 - TP4 - INFO - Decoded: 8NYYC4UG4EV6M06GGB7D1OXZKSVNBE39
+2026-03-16 21:34:09,832 - TP4 - INFO - Challenge: 746a6a65687a6f76747963776338686439346d61736e74316237643879746374
+2026-03-16 21:34:09,833 - TP4 - INFO - Decoded: tjjehzovtycwc8hd94masnt1b7d8ytct
+2026-03-16 21:34:09,904 - TP4 - INFO - Challenge: 336b796d3067366f61306f716e69727431306d7a686c72337079396967336533
+2026-03-16 21:34:09,904 - TP4 - INFO - Decoded: 3kym0g6oa0oqnirt10mzhlr3py9ig3e3
+2026-03-16 21:34:09,974 - TP4 - INFO - Challenge: .... --- -.- .-.. .- .--- ...- .--- ---.. .--. ..- -- .- ---.. --- .--- -. ---.. -..- ....- -..- .. .. .... ...-- -- -.-- ...- -.... ..-. ...-- .-..
+2026-03-16 21:34:09,974 - TP4 - INFO - Decoded: HOKLAJVJ8PUMA8OJN8X4XIIH3MYV6F3L
+2026-03-16 21:34:10,044 - TP4 - INFO - Challenge: ----- . . ...- --- .---- ..- ..--- . --. ...-- ...-- -..- --.. -.-- -..- ..... .-. . -.. .---- -. ....- -.-- ----- --. --. .-.. ..-. .-- .--. --
+2026-03-16 21:34:10,045 - TP4 - INFO - Decoded: 0EEVO1U2EG33XZYX5RED1N4Y0GGLFWPM
+2026-03-16 21:34:10,113 - TP4 - INFO - Challenge: MW0za2U3dndzcGNtaXRndGxtcXZ4MjZ5YXB1Mm9oZGs=
+2026-03-16 21:34:10,113 - TP4 - INFO - Decoded: 1m3ke7vwspcmitgtlmqvx26yapu2ohdk
+2026-03-16 21:34:10,181 - TP4 - INFO - Challenge: 637875796e61383633656c646930353773323166783532337862657a70616165
+2026-03-16 21:34:10,181 - TP4 - INFO - Decoded: cxuyna863eldi057s21fx523xbezpaae
+2026-03-16 21:34:10,248 - TP4 - INFO - Challenge: bGJpaXFuZW4weTlkemx4ZzByZ2lpYjQ3Z2hta3diZ2o=
+2026-03-16 21:34:10,249 - TP4 - INFO - Decoded: lbiiqnen0y9dzlxg0rgiib47ghmkwbgj
+2026-03-16 21:34:10,318 - TP4 - INFO - Challenge: ... .-- .... --... .-.. ----- -... -... -.-. -... ---.. .--. -. -.- .-.. -... --.. -..- .---- .- ... ..-. --... ...-- -.-- ----- .- .-.. ----- ...- .... -..-
+2026-03-16 21:34:10,318 - TP4 - INFO - Decoded: SWH7L0BBCB8PNKLBZX1ASF73Y0AL0VHX
+2026-03-16 21:34:10,386 - TP4 - INFO - Challenge: ..... .. -.- ..... -.- -.- ..--- .. .... ..... .-. --. ..... ...-- -- ..-. --- -.-- --... . -.... ..-. . ....- ----- . ....- ---.. -... -.-. .- ---
+2026-03-16 21:34:10,387 - TP4 - INFO - Decoded: 5IK5KK2IH5RG53MFOY7E6FE40E48BCAO
+2026-03-16 21:34:10,456 - TP4 - INFO - Challenge: MDJ3MGxoamcwY3Q2cDJybXZmdXlob2pjNHJjcWt5cG0=
+2026-03-16 21:34:10,456 - TP4 - INFO - Decoded: 02w0lhjg0ct6p2rmvfuyhojc4rcqkypm
+2026-03-16 21:34:10,524 - TP4 - INFO - Challenge: 387a3679796a6733617163717a66636d6d7133796b7a7230646f6e6c62686275
+2026-03-16 21:34:10,524 - TP4 - INFO - Decoded: 8z6yyjg3aqcqzfcmmq3ykzr0donlbhbu
+2026-03-16 21:34:10,590 - TP4 - INFO - Challenge: 6e326d36627a396f7a7a6275726a61656c366e7a797a733239697a756e357664
+2026-03-16 21:34:10,590 - TP4 - INFO - Decoded: n2m6bz9ozzburjael6nzyzs29izun5vd
+2026-03-16 21:34:10,659 - TP4 - INFO - Challenge: 303663616e627677657475793665316165326e3968336c6366336c7164726f68
+2026-03-16 21:34:10,659 - TP4 - INFO - Decoded: 06canbvwetuy6e1ae2n9h3lcf3lqdroh
+2026-03-16 21:34:10,730 - TP4 - INFO - Challenge: 38756b6769756a75787178326c6f697078793178746f7965356c717962776774
+2026-03-16 21:34:10,730 - TP4 - INFO - Decoded: 8ukgiujuxqx2loipxy1xtoye5lqybwgt
+2026-03-16 21:34:10,795 - TP4 - INFO - Challenge: 63697a346b6f7a7a6c6c79727462356d386f357a676667716730613138353175
+2026-03-16 21:34:10,795 - TP4 - INFO - Decoded: ciz4kozzllyrtb5m8o5zgfgqg0a1851u
+2026-03-16 21:34:10,865 - TP4 - INFO - Challenge: 626b6e6d35316a716c74306f686b6e6f6f6d6c35376f6c6f6e666f7964386c77
+2026-03-16 21:34:10,865 - TP4 - INFO - Decoded: bknm51jqlt0ohknooml57olonfoyd8lw
+2026-03-16 21:34:10,935 - TP4 - INFO - Challenge: Z243aml6dTNrejFsdTNsZWJjcmUzYTdmbHYycnRicms=
+2026-03-16 21:34:10,936 - TP4 - INFO - Decoded: gn7jizu3kz1lu3lebcre3a7flv2rtbrk
+2026-03-16 21:34:11,024 - TP4 - INFO - Challenge: 746e797537376a7931626663646b65773733686138733667633763386c323738
+2026-03-16 21:34:11,024 - TP4 - INFO - Decoded: tnyu77jy1bfcdkew73ha8s6gc7c8l278
+2026-03-16 21:34:11,089 - TP4 - INFO - Challenge: Zm55bWg0ODVhb3hzOTdqdGFzMG4zemlrcTFnbTMwbHQ=
+2026-03-16 21:34:11,089 - TP4 - INFO - Decoded: fnymh485aoxs97jtas0n3zikq1gm30lt
+2026-03-16 21:34:11,156 - TP4 - INFO - Challenge: -- .-.. . .-. .- ... .- ..- -. ..--- -... ..-. ---.. .--- .- .. .---- ..-. -.... -.- ..... ---.. --... ...-- -. - - -.-. --.. --... .--. .--
+2026-03-16 21:34:11,157 - TP4 - INFO - Decoded: MLERASAUN2BF8JAI1F6K5873NTTCZ7PW
+2026-03-16 21:34:11,223 - TP4 - INFO - Challenge: 6b3764666733316a6e6936696c713232317373346c767a756c32753278643770
+2026-03-16 21:34:11,223 - TP4 - INFO - Decoded: k7dfg31jni6ilq221ss4lvzul2u2xd7p
+2026-03-16 21:34:11,237 - TP4 - INFO - Challenge: ESGI{G00d_Pr0gr4mmer}
+2026-03-16 21:34:11,238 - TP4 - INFO - Decoded: ESGI{G00d_Pr0gr4mmer}
+
+
+# Yeehhhhhhhh here is the flag : ESGI{G00d_Pr0gr4mmer}

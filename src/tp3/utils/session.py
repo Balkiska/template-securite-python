@@ -1,3 +1,5 @@
+import random
+
 from src.tp3.utils.captcha import Captcha
 
 
@@ -23,6 +25,8 @@ class Session:
         self.captcha_value = ""
         self.flag_value = ""
         self.valid_flag = ""
+        self.response = None
+        self.captcha_session = None
 
     def prepare_request(self):
         """
@@ -33,17 +37,24 @@ class Session:
         captcha.solve()
 
         self.captcha_value = captcha.get_value()
-        self.flag_value = "FIXME"
+        self.captcha_session = captcha.session
+        self.flag_value = str(random.randint(1000, 2000))
 
     def submit_request(self):
         """
         Sends the flag and captcha.
         """
+        data = {"flag": self.flag_value, "captcha": self.captcha_value, "submit": "submit"}
+        self.response = self.captcha_session.post(self.url, data=data)
 
     def process_response(self):
         """
         Processes the response.
         """
+        if "Invalid captcha" not in self.response.text:
+            self.valid_flag = self.flag_value
+            return True
+        return False
 
     def get_flag(self):
         """

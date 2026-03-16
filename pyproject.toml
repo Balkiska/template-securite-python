@@ -9,6 +9,7 @@ packages = [
   { include = "tp1", from = "src" },
   { include = "tp2", from = "src" },
   { include = "tp3", from = "src" },
+  { include = "tp4", from = "src" },
 ]
 
 [tool.poetry.dependencies]
@@ -21,6 +22,9 @@ pytest = "^8.3.5"
 capstone = "^5.0.6"
 python-dotenv = "^1.2.1"
 cairosvg = "^2.8.2"
+pillow = "^11.0.0"
+pytesseract = "^0.3.13"
+pwntools = "^4.13.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -30,3 +34,4 @@ build-backend = "poetry.core.masonry.api"
 tp1 = "tp1.main:main"
 tp2 = "tp2.main:main"
 tp3 = "tp3.main:main"
+tp4 = "tp4.main:main"

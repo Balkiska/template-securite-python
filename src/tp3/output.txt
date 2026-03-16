@@ -1,0 +1,6 @@
+➜  template-securite-python git:(main) ✗ sudo -E poetry run tp3
+
+2026-03-15 15:28:24,047 - TP3 - INFO - Starting TP3
+2026-03-15 15:28:24,280 - TP3 - INFO - Smell good !
+ Flag for http://31.220.95.27:9002/captcha1/ : 1924
+
